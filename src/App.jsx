@@ -14,10 +14,14 @@ export function App () {
     <main>
       <h1>App de gatos</h1>
 
-      <button onClick={handleClick}>New fact</button>
+      <button onClick={handleClick} style={{ fontSize: 18 }}>New fact</button>
 
-      {fact && <p> {fact} </p>}
-      {imageUrl && <img src={imageUrl} alt={`Image using three words ${fact}`} />}
+      <card>
+        {fact && <p style={{ fontSize: 18 }}> {fact} </p>}
+        <div style={{ justifyContent: 'center' }}>
+          {imageUrl && <img src={imageUrl} alt={`Image using three words ${fact}`} style={{ borderRadius: 16 }} />}
+        </div>
+      </card>
     </main>
   )
 }
